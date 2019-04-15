@@ -1,1 +1,2 @@
-goRest
+Go REST API
+Using: dep
