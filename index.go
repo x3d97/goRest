@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	api "goTest/api/users"
+	api "goRest/api/users"
 
 	"github.com/gorilla/mux"
 )

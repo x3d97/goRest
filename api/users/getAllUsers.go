@@ -2,8 +2,8 @@ package api
 
 import (
 	"encoding/json"
-	"goTest/api"
-	"goTest/db"
+	"goRest/api"
+	"goRest/db"
 	"net/http"
 )
 

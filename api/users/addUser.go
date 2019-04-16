@@ -1,8 +1,8 @@
 package api
 
 import (
-	"goTest/api"
-	"goTest/db"
+	"goRest/api"
+	"goRest/db"
 	"net/http"
 	"strconv"
 )
