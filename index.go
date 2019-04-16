@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	api "github.com/x3d97/goRest/api/users"
@@ -10,10 +11,16 @@ import (
 
 func main() {
 	r := mux.NewRouter()
+	r.HandleFunc("/", mainPage)
 	r.HandleFunc("/api/users", api.GetAllUsers).Methods("GET")
 	r.HandleFunc("/api/users/{id}", api.GetUser).Methods("GET")
 	r.HandleFunc("/api/users", api.AddUser).Methods("POST")
 	r.HandleFunc("/api/users/{id}", api.DeleteUser).Methods("DELETE")
 
 	http.ListenAndServe(":3000", r)
+}
+
+func mainPage(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	fmt.Fprintf(w, "Kuk")
 }
