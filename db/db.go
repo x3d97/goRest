@@ -17,12 +17,11 @@ type User struct {
 var db *mgo.Database
 
 func init() {
-	session, err := mgo.Dial("localhost/goRest")
+	session, err := mgo.Dial("mongodb://heroku_0dl5d90k:dii2h930p13v6l8luskli2ojgt@ds125526.mlab.com:25526/heroku_0dl5d90k")
 	if err != nil {
 		log.Fatalf("Failed to connect to database: %v", err)
 	}
-
-	db = session.DB("goRest")
+	db = session.DB("heroku_0dl5d90k")
 }
 
 func collection() *mgo.Collection {
