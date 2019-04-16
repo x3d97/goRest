@@ -2,8 +2,8 @@ package api
 
 import (
 	"encoding/json"
-	"goRest/api"
-	"goRest/db"
+	"github.com/x3d97/goRest/api"
+	"github.com/x3d97/goRest/db"
 	"net/http"
 
 	"github.com/gorilla/mux"
